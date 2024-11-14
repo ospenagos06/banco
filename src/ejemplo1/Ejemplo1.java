@@ -4,7 +4,7 @@ package ejemplo1;
 /**
  *
  * @author Néstor Bolívar
-    Clase POO
+    
  */
 public class Ejemplo1 {
 
