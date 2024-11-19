@@ -13,28 +13,13 @@ public class Ejemplo1 {
      */
     public static void main(String[] args) {
         
-        int valor = 4;
-        /*
-        double
-        boolean
-        ....
-        */       
-                
-        String valor1 = Integer.toString(valor);
-        System.out.println("Los valores son "+valor+"  " + valor1);
-        if(valor1 == "4"){
-            System.out.println("Es la ejecucion verdadera");
-            
-        }if(true){
-            System.out.println("Es la ejecucion falsa");
-        }
+        Cliente Nestor = new Cliente();
         
-        
+        Cuenta cuenta1 = new Cuenta(Nestor);
         
         
 
-         
-        
+      
         
     }
  
