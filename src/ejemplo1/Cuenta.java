@@ -11,7 +11,11 @@ public class Cuenta {
     Cuenta(Cliente Nestor) {
         Titular = Nestor.nombre;
     }
-
+    
+    double CuatroXmil(double y){
+        y += y*0.004;
+        return y;
+    }
 
     boolean consignacion(int x){
         
@@ -24,7 +28,32 @@ public class Cuenta {
             return false;
         }  
     }
-
+    
+    boolean retiro(int x){
+        if (excento==true){
+            if (x<=Saldo){
+                System.out.println("Contando su dinero...");
+                Saldo -= x;
+                return true;
+            }
+            else{
+                System.out.println("El valor introducido excede su Saldo actual.");
+                return false;
+            }
+        }
+        else{
+            if (CuatroXmil(x)<=Saldo){
+                System.out.println("Contando su dinero...");
+                Saldo -= CuatroXmil(x);
+                System.out.println("Retiere su dinero");
+                return true;
+            }
+            else{
+                System.out.println("El valor introducido excede su Saldo actual.");
+                return false;
+            }
+        }
+    }
     int getSaldo() {
         
         return this.Saldo;
